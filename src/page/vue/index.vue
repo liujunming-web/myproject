@@ -40,6 +40,14 @@ export default {
                     title:'树结构',
                     name:'tree'
                 },
+                {
+                    title:'关系图谱',
+                    name:'relationmap'
+                },
+                  {
+                    title:'关系图',
+                    name:'relation'
+                },
             ]
         }
     },

@@ -20,6 +20,7 @@
       <el-button @click="transgo('drag')">拖拽</el-button>
       <el-button @click="transgo('draggable')">vueDraggable</el-button>
       <el-button @click="transgo('brower')">浏览器指令</el-button>
+      <el-button @click="transgo('addclass')">动态添加class</el-button>
     </div>
     <div>
       <el-button @click="transgo('vue')">Vue</el-button>
@@ -31,6 +32,9 @@
     </div>
     <div>
       <el-button @click="transgo('iterator')">迭代器</el-button>
+    </div>
+    <div>
+      <el-button @click="transgo('video')">视频播放</el-button>
     </div>
     <p>{{filterTest | filterNum}}</p>
     <p>{{filterTest1 | filterNum}}</p>

@@ -160,19 +160,33 @@ const router = new Router({
       path:'*',
       component:() => import ("@/components/404")
     },
+    //视频播放器
+    {
+      path:'/video',
+      name:'video',
+      component:() => import ("@/page/video/index")
+    }, 
+     //动态添加class属性
+     {
+      path:'/addclass',
+      name:'addclass',
+      component:() => import('@/page/es6/addClass')
+    }, 
+    // 关系图谱
+    {
+      path:'/relationmap',
+      name:'relationmap',
+      component:() => import('@/page/vue/components/relationmap')
+    },
+    // 关系图谱 vue-org-tree
+    {
+      path:'/relation',
+      name:'relation',
+      component:() => import('@/page/vue/components/relation')
+    },
 
   ]
 })
-
-// router.beforeEach((to,from,next) => {
-//   console.log(to.name)
-//   // axios.post('/uprotect/').then(res => {})
-//   if(to.name == 'vue'){
-//       next('/excel')
-//   }else{
-//     next();
-//   }
-// })
 
 export default router;
 

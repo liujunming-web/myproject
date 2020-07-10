@@ -19,6 +19,23 @@ Vue.use(VueDND)
 import JsonExcel from 'vue-json-excel'
 Vue.component('downloadExcel', JsonExcel)
 
+// echarts
+
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
+// 关系图谱插件
+import Vue2OrgTree from 'vue2-org-tree';
+Vue.use(Vue2OrgTree)
+import "vue2-org-tree/dist/style.css"
+
+// video播放器
+import VideoPlayer from 'vue-video-player'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+
+Vue.use(VideoPlayer)
+
 
 Vue.use(ElementUI)
 console.log('环境测试',process.env.AIR_PORT);
