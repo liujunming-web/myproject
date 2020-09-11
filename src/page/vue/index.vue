@@ -5,10 +5,15 @@
         <div class="content">
             <div class="box"></div>
         </div>
+        <pc-talk></pc-talk>
     </div>
 </template>
 <script>
+import pcTalk from './components/parentChildTalk'
 export default {
+    components:{
+        pcTalk
+    },
     data(){
         return {
             list:[
