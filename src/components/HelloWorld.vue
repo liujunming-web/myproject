@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <change-num style="width:477px;margin:0 auto;"></change-num>
     <p class="pink">1.全局使用transition,在App.vue中，显隐形式</p>
     <p class="pink">2.针对首页使用keep-alive,详情在App.vue中有介绍</p>
   
@@ -44,6 +45,7 @@
 
 <script>
 let axios = require("axios")
+import changeNum from '../page/numchange/changenum'
 export default {
   name: 'HelloWorld',
   data () {
@@ -53,6 +55,9 @@ export default {
       filterTest1:3,
       filterTest2:-1,
     }
+  },
+  components:{
+    changeNum
   },
   // filter方法是将原有的数据做处理，通过不同的逻辑展示出不同的效果
   filters:{
