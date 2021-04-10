@@ -156,18 +156,14 @@ const router = new Router({
       name: 'iterator',
       component: () => import('@/page/es6/iterator')
     },
-    {
-      path:'*',
-      component:() => import ("@/components/404")
-    },
     //视频播放器
     {
       path:'/video',
       name:'video',
       component:() => import ("@/page/video/index")
     }, 
-     //动态添加class属性
-     {
+    //动态添加class属性
+    {
       path:'/addclass',
       name:'addclass',
       component:() => import('@/page/es6/addClass')
@@ -183,6 +179,22 @@ const router = new Router({
       path:'/relation',
       name:'relation',
       component:() => import('@/page/vue/components/relation')
+    },
+    // 文字滚动
+    {
+      path:'/textscroll',
+      name:'textscroll',
+      component:() => import('@/page/textscroll/index')
+    },
+    // svg
+    {
+      path:'/svg',
+      name:'svg',
+      component:() => import('@/page/svg/index')
+    },
+    {
+      path:'*',
+      component:() => import ("@/components/404")
     },
 
   ]

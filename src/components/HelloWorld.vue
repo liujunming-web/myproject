@@ -2,7 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <change-num style="width:477px;margin:0 auto;"></change-num>
+    <!-- <change-num style="width:477px;margin:0 auto;"></change-num> -->
+    <scroll-swiper></scroll-swiper>
+    <loop-scroll></loop-scroll>
     <p class="pink">1.全局使用transition,在App.vue中，显隐形式</p>
     <p class="pink">2.针对首页使用keep-alive,详情在App.vue中有介绍</p>
   
@@ -15,9 +17,11 @@
       <el-button @click="transgo('directive')">自定义命令</el-button>
       <el-button @click="console">测试nextTick</el-button>
       <el-button @click="transgo('editor')">富文本编辑器</el-button>
+      <el-button @click="transgo('textscroll')">文字滚动</el-button>
+      <el-button @click="transgo('svg')">SVG</el-button>
     </div>
     <div>
-      <el-button @click="transgo('calc')">计算</el-button>
+      <el-button v-color @click="transgo('calc')">计算</el-button>
       <el-button @click="transgo('drag')">拖拽</el-button>
       <el-button @click="transgo('draggable')">vueDraggable</el-button>
       <el-button @click="transgo('brower')">浏览器指令</el-button>
@@ -40,12 +44,16 @@
     <p>{{filterTest | filterNum}}</p>
     <p>{{filterTest1 | filterNum}}</p>
     <p>{{filterTest2 | filterNum}}</p>
+    <my-button></my-button>
   </div>
 </template>
 
 <script>
 let axios = require("axios")
 import changeNum from '../page/numchange/changenum'
+import scrollSwiper from '../page/scrollSwiper/scroll'
+import loopScroll from '../page/scrollSwiper/loopScroll'
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -57,7 +65,9 @@ export default {
     }
   },
   components:{
-    changeNum
+    changeNum,
+    scrollSwiper,
+    loopScroll
   },
   // filter方法是将原有的数据做处理，通过不同的逻辑展示出不同的效果
   filters:{

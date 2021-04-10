@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>myproject</title>
   </head>
-  <body>
+  <body id="body">
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    
+    var sc = document.createElement("script");
+    sc.setAttribute("type","text/javascript");
+    sc.src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js";
+    document.getElementById('body').appendChild(sc);
+    
+    if ( window.ActiveXObject || "ActiveXObject" in window){ //判断是否是ie
+        if(sc.readyState){ //判断是否支持readyState
+            sc.onreadystatechange = function() {
+                if(this.readyState == "loaded" || this.readyState == "complete"){
+                  console.log("ie10及以下加载完成");
+                }
+            }
+        }else{
+            sc.onload = function() {
+                console.log("ie11及Edge加载完成");
+            }
+        }
+    }else{    //不是ie
+        sc.onload = function() {
+            console.log('非ie浏览器加载完成');
+        }
+    }
+  </script>
 </html>

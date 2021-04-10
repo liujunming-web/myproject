@@ -16,8 +16,21 @@ Vue.use(VueDND)
 
 // 导出功能
 
+
+import Elements from '@/plugins/entry'
+Vue.use(Elements)
+
 import JsonExcel from 'vue-json-excel'
 Vue.component('downloadExcel', JsonExcel)
+
+// 文字滚动插件
+import scroll from 'vue-seamless-scroll'
+Vue.use(scroll)
+
+// 文字滚动插件2
+import VueLoopScroll from 'vueloopscroll'
+// import 'vueloopscroll/lib/vueloopscroll.css';
+Vue.use(VueLoopScroll)
 
 // echarts
 

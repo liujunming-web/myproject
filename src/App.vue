@@ -44,7 +44,10 @@ export default {
     // this.transitionName = toIndex < fromIndex ? 'slide-right' : 'slide-left'
   }
 },
-mounted(){
+beforeCreate(){
+  document.onreadystatechange = function(){
+    console.log('状态改变',document.readyState)
+  }
   // console.log("我加载啦")
 }
 }
