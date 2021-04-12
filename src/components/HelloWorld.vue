@@ -44,7 +44,11 @@
     <p>{{filterTest | filterNum}}</p>
     <p>{{filterTest1 | filterNum}}</p>
     <p>{{filterTest2 | filterNum}}</p>
+    <p>插件引入</p>
     <my-button></my-button>
+    <my-list :list="[22,22,22,22]"></my-list>
+    {{num}}
+    <el-button @click="click()">num加1</el-button>
   </div>
 </template>
 
@@ -53,16 +57,22 @@ let axios = require("axios")
 import changeNum from '../page/numchange/changenum'
 import scrollSwiper from '../page/scrollSwiper/scroll'
 import loopScroll from '../page/scrollSwiper/loopScroll'
+import {myMixin} from '@/mixin/index'
 
 export default {
   name: 'HelloWorld',
+  mixins:[myMixin],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       filterTest:1,
       filterTest1:3,
       filterTest2:-1,
+      num:4
     }
+  },
+  created(){
+    console.log('哈哈',)
   },
   components:{
     changeNum,
