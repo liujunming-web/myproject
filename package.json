@@ -32,7 +32,7 @@
     "vuedraggable": "^2.23.2",
     "vueloopscroll": "^0.1.6",
     "wangeditor": "^3.1.1",
-    "xlsx": "^0.16.2"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
